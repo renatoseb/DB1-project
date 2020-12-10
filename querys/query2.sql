@@ -16,6 +16,8 @@ LIMIT 1;
 
 
 --¿4. ¿Cúal fue el local que más vendío en un determinado mes y año?
+/*Locales que han generado una mayor ganancia en un tiempo determinado.
+Justificación: A veces el propietario de la empresa desea verificar las ganancias  de cada local y cual de ellos está obtiendo mayores ingreso en el transcurso del mes.*/
 SELECT Direccion, SUM(monto) as total
 FROM(
     SELECT T.Direccion as Direccion, B.monto as monto
@@ -29,9 +31,3 @@ FROM(
 GROUP BY (Direccion)
 ORDER BY total DESC
 LIMIT 1;
-/*
-Para obtener el local que obtuvo una mayor ganancia en un determinado mes y año. Tendremos que realizar
-una sumatoria de los montos de cada factura y boleta. Para aquello necesitamos
-conocer quien fue el terapista que realizo la terapia en base a ello obtenemos la dirección del local. Debido
-a que cada terapista trabaja en un local.
-*/
