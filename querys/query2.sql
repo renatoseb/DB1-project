@@ -2,7 +2,10 @@
 /*Locales que han generado una mayor ganancia en un tiempo determinado.
 Justificación: A veces el propietario de la empresa desea verificar las ganancias  de cada local y cual de ellos está obtiendo mayores ingreso en el transcurso del mes.*/
 -- mil
-EXPLAIN (ANALYZE)
+
+CREATE INDEX index_dni_c ON Realiza_Boleta USING hash(DNI_terapista);
+CREATE INDEX index_dni_t ON Terapista USING hash(DNI);
+
 SELECT Direccion, SUM(monto) as total
 FROM(
     SELECT T.Direccion as Direccion, B.monto as monto

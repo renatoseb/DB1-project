@@ -4,6 +4,7 @@ Justificación: A veces llegan a atenderse clientes que
 informan que son clientes frecuentes y se verifica. Si 
 son clientes frecuentes se le ofrece un trato diferente.*/
 
+
 -- mil
 SELECT C.nombres,C.apellidos
     FROM mil.cliente C, (
