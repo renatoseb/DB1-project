@@ -7,156 +7,168 @@ son clientes frecuentes se le ofrece un trato diferente.*/
 -- mil
 SELECT C.nombres,C.apellidos
     FROM mil.cliente C, (
-    SELECT DNI_cliente, COUNT(DNI_cliente) AS total
-    FROM (SELECT DNI_cliente 
-        FROM  mil.Realiza_Boleta
+    SELECT DNI, COUNT(DNI) AS total
+    FROM (SELECT DNI 
+        FROM  mil.Boleta
+
         UNION ALL
-        SELECT DNI_cliente
-        FROM mil.Realiza_Factura) S
-    GROUP BY(DNI_cliente)
-    HAVING COUNT(DNI_cliente) =(
+        SELECT DNI
+        FROM mil.Factura) S
+    GROUP BY(DNI)
+    HAVING COUNT(DNI) =(
         SELECT MAX(total)
         FROM(
-            SELECT DNI_cliente, COUNT(DNI_cliente) AS total
-            FROM (SELECT DNI_cliente 
-                FROM  mil.Realiza_Boleta
+            SELECT DNI, COUNT(DNI) AS total
+            FROM (SELECT DNI 
+                FROM  mil.Boleta
+
                 UNION ALL
-                SELECT DNI_cliente
-                FROM mil.Realiza_Factura) S
-            GROUP BY(DNI_cliente)
+                SELECT DNI
+                FROM mil.Factura) S
+            GROUP BY(DNI)
         ) C
     )
     ORDER BY total DESC
 ) RB
-WHERE RB.DNI_cliente = C.DNI;
+WHERE RB.DNI = C.DNI;
 
 -- mil_i
 SELECT C.nombres,C.apellidos
     FROM mil_i.cliente C, (
-    SELECT DNI_cliente, COUNT(DNI_cliente) AS total
-    FROM (SELECT DNI_cliente 
-        FROM  mil_i.Realiza_Boleta
+    SELECT DNI, COUNT(DNI) AS total
+    FROM (SELECT DNI 
+        FROM  mil_i.Boleta
+
         UNION ALL
-        SELECT DNI_cliente
-        FROM mil_i.Realiza_Factura) S
-    GROUP BY(DNI_cliente)
-    HAVING COUNT(DNI_cliente) =(
+        SELECT DNI
+        FROM mil_i.Factura) S
+    GROUP BY(DNI)
+    HAVING COUNT(DNI) =(
         SELECT MAX(total)
         FROM(
-            SELECT DNI_cliente, COUNT(DNI_cliente) AS total
-            FROM (SELECT DNI_cliente 
-                FROM  mil_i.Realiza_Boleta
+            SELECT DNI, COUNT(DNI) AS total
+            FROM (SELECT DNI 
+                FROM  mil_i.Boleta
+
                 UNION ALL
-                SELECT DNI_cliente
-                FROM mil_i.Realiza_Factura) S
-            GROUP BY(DNI_cliente)
+                SELECT DNI
+                FROM mil_i.Factura) S
+            GROUP BY(DNI)
         ) C
     )
     ORDER BY total DESC
 ) RB
-WHERE RB.DNI_cliente = C.DNI;
+WHERE RB.DNI = C.DNI;
 
 -- mil_10
 SELECT C.nombres,C.apellidos
     FROM mil_10.cliente C, (
-    SELECT DNI_cliente, COUNT(DNI_cliente) AS total
-    FROM (SELECT DNI_cliente 
-        FROM  mil_10.Realiza_Boleta
+    SELECT DNI, COUNT(DNI) AS total
+    FROM (SELECT DNI 
+        FROM  mil_10.Boleta
+
         UNION ALL
-        SELECT DNI_cliente
-        FROM mil_10.Realiza_Factura) S
-    GROUP BY(DNI_cliente)
-    HAVING COUNT(DNI_cliente) =(
+        SELECT DNI
+        FROM mil_10.Factura) S
+    GROUP BY(DNI)
+    HAVING COUNT(DNI) =(
         SELECT MAX(total)
         FROM(
-            SELECT DNI_cliente, COUNT(DNI_cliente) AS total
-            FROM (SELECT DNI_cliente 
-                FROM  mil_10.Realiza_Boleta
+            SELECT DNI, COUNT(DNI) AS total
+            FROM (SELECT DNI 
+                FROM  mil_10.Boleta
+
                 UNION ALL
-                SELECT DNI_cliente
-                FROM mil_10.Realiza_Factura) S
-            GROUP BY(DNI_cliente)
+                SELECT DNI
+                FROM mil_10.Factura) S
+            GROUP BY(DNI)
         ) C
     )
     ORDER BY total DESC
 ) RB
-WHERE RB.DNI_cliente = C.DNI;
+WHERE RB.DNI = C.DNI;
 
 -- mil_10_i
 SELECT C.nombres,C.apellidos
     FROM mil_10_i.cliente C, (
-    SELECT DNI_cliente, COUNT(DNI_cliente) AS total
-    FROM (SELECT DNI_cliente 
-        FROM  mil_10_i.Realiza_Boleta
+    SELECT DNI, COUNT(DNI) AS total
+    FROM (SELECT DNI 
+        FROM  mil_10_i.Boleta
+
         UNION ALL
-        SELECT DNI_cliente
-        FROM mil_10_i.Realiza_Factura) S
-    GROUP BY(DNI_cliente)
-    HAVING COUNT(DNI_cliente) =(
+        SELECT DNI
+        FROM mil_10_i.Factura) S
+    GROUP BY(DNI)
+    HAVING COUNT(DNI) =(
         SELECT MAX(total)
         FROM(
-            SELECT DNI_cliente, COUNT(DNI_cliente) AS total
-            FROM (SELECT DNI_cliente 
-                FROM  mil_10_i.Realiza_Boleta
+            SELECT DNI, COUNT(DNI) AS total
+            FROM (SELECT DNI 
+                FROM  mil_10_i.Boleta
+
                 UNION ALL
-                SELECT DNI_cliente
-                FROM mil_10_i.Realiza_Factura) S
-            GROUP BY(DNI_cliente)
+                SELECT DNI
+                FROM mil_10_i.Factura) S
+            GROUP BY(DNI)
         ) C
     )
     ORDER BY total DESC
 ) RB
-WHERE RB.DNI_cliente = C.DNI;
+WHERE RB.DNI = C.DNI;
 
 -- mil_100
 SELECT C.nombres,C.apellidos
     FROM mil_100.cliente C, (
-    SELECT DNI_cliente, COUNT(DNI_cliente) AS total
-    FROM (SELECT DNI_cliente 
-        FROM  mil_100.Realiza_Boleta
+    SELECT DNI, COUNT(DNI) AS total
+    FROM (SELECT DNI 
+        FROM  mil_100.Boleta
+
         UNION ALL
-        SELECT DNI_cliente
-        FROM mil_100.Realiza_Factura) S
-    GROUP BY(DNI_cliente)
-    HAVING COUNT(DNI_cliente) =(
+        SELECT DNI
+        FROM mil_100.Factura) S
+    GROUP BY(DNI)
+    HAVING COUNT(DNI) =(
         SELECT MAX(total)
         FROM(
-            SELECT DNI_cliente, COUNT(DNI_cliente) AS total
-            FROM (SELECT DNI_cliente 
-                FROM  mil_100.Realiza_Boleta
+            SELECT DNI, COUNT(DNI) AS total
+            FROM (SELECT DNI 
+                FROM  mil_100.Boleta
+
                 UNION ALL
-                SELECT DNI_cliente
-                FROM mil_100.Realiza_Factura) S
-            GROUP BY(DNI_cliente)
+                SELECT DNI
+                FROM mil_100.Factura) S
+            GROUP BY(DNI)
         ) C
     )
     ORDER BY total DESC
 ) RB
-WHERE RB.DNI_cliente = C.DNI;
+WHERE RB.DNI = C.DNI;
 
 -- mil_100_i
 SELECT C.nombres,C.apellidos
     FROM mil_100_i.cliente C, (
-    SELECT DNI_cliente, COUNT(DNI_cliente) AS total
-    FROM (SELECT DNI_cliente 
-        FROM  mil_100_i.Realiza_Boleta
+    SELECT DNI, COUNT(DNI) AS total
+    FROM (SELECT DNI 
+        FROM  mil_100_i.Boleta
+
         UNION ALL
-        SELECT DNI_cliente
-        FROM mil_100_i.Realiza_Factura) S
-    GROUP BY(DNI_cliente)
-    HAVING COUNT(DNI_cliente) =(
+        SELECT DNI
+        FROM mil_100_i.Factura) S
+    GROUP BY(DNI)
+    HAVING COUNT(DNI) =(
         SELECT MAX(total)
         FROM(
-            SELECT DNI_cliente, COUNT(DNI_cliente) AS total
-            FROM (SELECT DNI_cliente 
-                FROM  mil_100_i.Realiza_Boleta
+            SELECT DNI, COUNT(DNI) AS total
+            FROM (SELECT DNI 
+                FROM  mil_100_i.Boleta
+
                 UNION ALL
-                SELECT DNI_cliente
-                FROM mil_100_i.Realiza_Factura) S
-            GROUP BY(DNI_cliente)
+                SELECT DNI
+                FROM mil_100_i.Factura) S
+            GROUP BY(DNI)
         ) C
     )
     ORDER BY total DESC
 ) RB
-WHERE RB.DNI_cliente = C.DNI;
+WHERE RB.DNI = C.DNI;
 
